@@ -6,13 +6,10 @@ import Footer from "../Footer";
 interface ipageProps {}
 
 export const metadata = {
-  title: "Kapcsolat | Széchenyi Fotó",
+  title: "Kapcsolat | Balázs Fotóz",
   description: "Vedd fel velem a kapcsolatot",
-  image: "/mark.jpg",
-  "twitter-image": "/mark.jpg",
-  "opengraph-image": "/mark.jpg",
   openGraph: {
-    images: "/mark.jpg",
+    // images: "/mark.jpg",
   },
 };
 
