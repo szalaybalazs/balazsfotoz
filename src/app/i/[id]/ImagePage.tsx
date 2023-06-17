@@ -29,7 +29,7 @@ const ImagePage: FunctionComponent<iImagePageProps> = (props) => {
         <div className="flex flex-1 flex-col items-end justify-end text-sm leading-relaxed font-medium text-grap-800 font-serif">
           {!isModal && (
             <button
-              onClick={() => router.back()}
+              onClick={() => router.push("/")}
               className="pointer-events-auto w-12 h-12 border border-transparent mb-auto fixed left-4 top-4 rounded-full flex justify-center items-center hover:border-gray-200 text-gray-700"
             >
               <svg
