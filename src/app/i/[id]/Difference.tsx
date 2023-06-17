@@ -6,12 +6,16 @@ interface iDifferenceProps {
   url: string;
   compressed?: string;
   raw?: string;
+  width: number;
+  height: number;
 }
 
 const Difference: FunctionComponent<iDifferenceProps> = ({
   url,
   raw,
   compressed,
+  width,
+  height,
 }) => {
   const [split, setSplit] = useState<null | number>(null);
   const wrapper = useRef<HTMLDivElement>(null);
@@ -27,7 +31,7 @@ const Difference: FunctionComponent<iDifferenceProps> = ({
   return (
     <div
       ref={wrapper}
-      className="w-full h-full relative overflow-hidden rounded-sm"
+      className="w-full h-full relative overflow-hidden rounded-sm flex"
       onMouseLeave={_handleMouseLeave}
       onMouseMove={_handleMouseMove}
     >
@@ -40,7 +44,7 @@ const Difference: FunctionComponent<iDifferenceProps> = ({
         />
       )}
       <img
-        className="pointer-events-auto max-w-full max-h-full rounded-sm relative z-10"
+        className="pointer-events-auto max-w-full max-h-full rounded-sm absolte inset-0 z-10"
         draggable={false}
         src={`/images/${url}`}
         alt=""

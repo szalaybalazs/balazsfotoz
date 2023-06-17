@@ -46,7 +46,10 @@ export default function Home() {
               href={`/i/${image.id}`}
               key={`image-${image.id}`}
             >
-              <div className="flex">
+              <div
+                className="flex"
+                style={{ aspectRatio: image.width / image.height }}
+              >
                 <img
                   className="rounded-sm"
                   src={`/images/${image.compressed ?? image.url}`}

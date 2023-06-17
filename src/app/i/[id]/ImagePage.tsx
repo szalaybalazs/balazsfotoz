@@ -56,6 +56,8 @@ const ImagePage: FunctionComponent<iImagePageProps> = (props) => {
         </div>
         <div className="mx-auto image-container">
           <Difference
+            width={image.width}
+            height={image.height}
             url={image.url}
             raw={image.raw}
             compressed={image.compressed}
@@ -86,6 +88,9 @@ const ImagePage: FunctionComponent<iImagePageProps> = (props) => {
           <span className="text-xl font-bold">{image.title}</span>
           <span>{dayjs(image.date).format("YYYY. MM. DD")}</span>
           {image.place && <span>{image.place}</span>}
+          <span>
+            {image.width} x {image.height}
+          </span>
           {image.description && (
             <p className="mt-2 opacity-80">{image.description}</p>
           )}

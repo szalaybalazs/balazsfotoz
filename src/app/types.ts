@@ -12,6 +12,8 @@ interface iImage {
   id: number;
   title: string;
   url: string;
+  width: number;
+  height: number;
   raw?: string;
   compressed?: string;
   categories: eCategory[];
