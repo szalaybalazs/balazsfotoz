@@ -4,10 +4,15 @@ import { FunctionComponent, useRef, useState } from "react";
 
 interface iDifferenceProps {
   url: string;
+  compressed?: string;
   raw?: string;
 }
 
-const Difference: FunctionComponent<iDifferenceProps> = ({ url, raw }) => {
+const Difference: FunctionComponent<iDifferenceProps> = ({
+  url,
+  raw,
+  compressed,
+}) => {
   const [split, setSplit] = useState<null | number>(null);
   const wrapper = useRef<HTMLDivElement>(null);
   const _handleMouseLeave = () => setSplit(null);
@@ -26,8 +31,16 @@ const Difference: FunctionComponent<iDifferenceProps> = ({ url, raw }) => {
       onMouseLeave={_handleMouseLeave}
       onMouseMove={_handleMouseMove}
     >
+      {compressed && (
+        <img
+          className="pointer-events-auto max-w-full max-h-full rounded-sm absolute inset-0"
+          draggable={false}
+          src={`/images/${compressed}`}
+          alt=""
+        />
+      )}
       <img
-        className="pointer-events-auto max-w-full max-h-full rounded-sm"
+        className="pointer-events-auto max-w-full max-h-full rounded-sm relative z-10"
         draggable={false}
         src={`/images/${url}`}
         alt=""
@@ -40,7 +53,7 @@ const Difference: FunctionComponent<iDifferenceProps> = ({ url, raw }) => {
               opacity: split !== null ? 1 : 0,
               clipPath: `polygon(0 0, ${percent}% 0, ${percent}% 100%, 0 100%)`,
             }}
-            className="absolute inset-0 z-10"
+            className="absolute inset-0 z-20"
             src={`/images${raw}`}
             alt=""
           />

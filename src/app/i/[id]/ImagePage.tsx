@@ -55,7 +55,11 @@ const ImagePage: FunctionComponent<iImagePageProps> = (props) => {
           <span>ISO {image.iso}</span>
         </div>
         <div className="mx-auto image-container">
-          <Difference url={image.url} raw={image.raw} />
+          <Difference
+            url={image.url}
+            raw={image.raw}
+            compressed={image.compressed}
+          />
         </div>
         <div className="flex flex-1 flex-col items-start justify-start text-sm leading-relaxed font-medium text-grap-800 font-serif">
           {isModal && (
