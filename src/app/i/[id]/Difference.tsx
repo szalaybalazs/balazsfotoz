@@ -52,7 +52,9 @@ const Difference: FunctionComponent<iDifferenceProps> = ({
       <img
         className="pointer-events-auto max-w-full max-h-full rounded-sm inset-0 -z-10 opacity-0"
         draggable={false}
-        src={`https://placehold.co/${width}x${height}`}
+        src={`https://placehold.co/${Math.round(width / 2)}x${Math.round(
+          height / 2
+        )}`}
         alt="Placeholder"
       />
       {raw && (
