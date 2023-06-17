@@ -1,12 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { images } from "./images";
 import { useEffect, useState } from "react";
-import ImagePage from "./images/[id]/page";
-import ImageModal from "./ImageModal";
-import Header from "./Header";
 import Footer from "./Footer";
+import Header from "./Header";
+import ImageModal from "./ImageModal";
+import { images } from "./images";
+import ImagePage from "./i/[id]/ImagePage";
 
 export default function Home() {
   const [image, setImage] = useState<number | null>(null);
@@ -44,7 +43,7 @@ export default function Home() {
             <a
               onClick={_handleClick}
               className="mb-2 block"
-              href={`/images/${image.id}`}
+              href={`/i/${image.id}`}
               key={`image-${image.id}`}
             >
               <div className="flex">
@@ -63,7 +62,6 @@ export default function Home() {
 
       {image && (
         <ImageModal>
-          {/* @ts-expect-error ismodal prop */}
           <ImagePage isModal params={{ id: image }} />
         </ImageModal>
       )}
