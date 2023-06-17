@@ -42,7 +42,7 @@ const Form: FunctionComponent<iFormProps> = () => {
   return (
     <>
       {isSuccess ? (
-        <div className="relative text-center pt-32 mt-12">
+        <div className="relative font-serif text-center pt-32 mt-12">
           <div className="success">
             <span></span>
           </div>

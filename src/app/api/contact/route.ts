@@ -23,7 +23,7 @@ export const POST = async (request: Request) => {
         name: res.name,
         email: res.email,
       },
-      subject: `[balazsfotoz.copm] ${res.subject ?? "Új üzenet"}`,
+      subject: `[balazsfotoz.com] ${res.subject ?? "Új üzenet"}`,
       text: res.message,
     });
 
