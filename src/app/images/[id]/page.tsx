@@ -33,6 +33,11 @@ const ImagePage = (props: iParams) => {
           name="description"
           content={image.description ?? "Egy hobbifotós képei"}
         />
+        {/* og images */}
+        <meta
+          property="og:image"
+          content={`https://balazsfotoz.com/images${image.url}`}
+        />
       </Head>
       <main className="px-4 py-2 flex flex-col justify-center flex-1">
         <div className="flex gap-2 xl:gap-4 flex-col-reverse xl:flex-row">
