@@ -30,7 +30,7 @@ const ImagePage: FunctionComponent<iImagePageProps> = (props) => {
           {!isModal && (
             <button
               onClick={() => router.back()}
-              className="pointer-events-auto w-12 h-12 border border-transparent mb-auto rounded-full flex justify-center items-center hover:border-gray-200 text-gray-700"
+              className="pointer-events-auto w-12 h-12 border border-transparent mb-auto fixed left-4 top-4 rounded-full flex justify-center items-center hover:border-gray-200 text-gray-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
