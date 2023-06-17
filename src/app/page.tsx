@@ -49,7 +49,7 @@ export default function Home() {
               <div className="flex">
                 <img
                   className="rounded-sm"
-                  src={`/images/${image.url}`}
+                  src={`/images/${image.compressed ?? image.url}`}
                   alt={image.title}
                 />
               </div>
