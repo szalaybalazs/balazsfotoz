@@ -13,6 +13,7 @@ interface iImage {
   title: string;
   url: string;
   raw?: string;
+  compressed?: string;
   categories: eCategory[];
   date: string;
   place?: string;

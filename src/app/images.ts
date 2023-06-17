@@ -22,6 +22,7 @@ export const images: iImage[] = [
     title: "Panda",
     url: "/hirth/panda/image.jpg",
     raw: "/hirth/panda/raw.jpg",
+    compressed: "/hirth/panda/compressed.jpg",
     categories: ["animals", "objects"],
     date: "2023-05-27",
 
@@ -38,6 +39,7 @@ export const images: iImage[] = [
     id: 2,
     title: "Church",
     url: "/budapest/church/image.jpg",
+    compressed: "/budapest/church/compressed.jpg",
     categories: ["animals", "objects"],
     date: "2023-06-09",
 

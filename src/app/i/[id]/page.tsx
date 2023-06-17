@@ -14,7 +14,7 @@ export const generateMetadata = ({
   return {
     title: `${image?.title} - Kép | Balázs Fotóz`,
     openGraph: {
-      images: `/images${image?.url}`,
+      images: `/images${image?.compressed ?? image?.url}`,
     },
   };
 };
