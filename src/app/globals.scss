@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+  height: -webkit-fill-available;
+  background: #f2eecb11;
+  overflow-x: hidden;
+}
+
+div.image-container {
+  max-height: calc(100vh - 48px);
+  max-width: min(1100px, 100%);
+  // @media screen and (min-width: 1400px) {
+  //   max-width: min(1200px, 100%);
+  // }
+}
