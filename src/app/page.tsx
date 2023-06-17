@@ -42,7 +42,7 @@ export default function Home() {
           {images.map((image) => (
             <a
               onClick={_handleClick}
-              className="mb-2 block"
+              className="mb-2 block cursor-zoom-in"
               href={`/i/${image.id}`}
               key={`image-${image.id}`}
             >
