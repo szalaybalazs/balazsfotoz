@@ -1,16 +1,15 @@
 "use client";
 
 import { images } from "@/app/images";
-import { FunctionComponent } from "react";
-import Difference from "./Difference";
 import dayjs from "dayjs";
 import { useRouter } from "next/navigation";
+import Difference from "./Difference";
 
-interface ipageProps {
+interface iParams {
   params: {
     id: number;
   };
-  isModal?: boolean;
+  // isModal?: boolean;
 }
 
 const formatShutter = (val: number) => {
@@ -19,7 +18,8 @@ const formatShutter = (val: number) => {
   const fraction = 1 / val;
   return `1/${fraction.toLocaleString()}`;
 };
-const ImagePage: FunctionComponent<ipageProps> = ({ isModal, params }) => {
+const ImagePage = (props: iParams) => {
+  const { isModal, params } = props as iParams & { isModal?: boolean };
   const router = useRouter();
   const image = images.find((image) => image.id == params.id);
 

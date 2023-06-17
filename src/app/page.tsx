@@ -63,6 +63,7 @@ export default function Home() {
 
       {image && (
         <ImageModal>
+          {/* @ts-expect-error ismodal prop */}
           <ImagePage isModal params={{ id: image }} />
         </ImageModal>
       )}
