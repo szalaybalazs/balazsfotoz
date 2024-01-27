@@ -1,14 +1,12 @@
 import "./globals.scss";
-import { images } from "./images";
 
-const image = images[0]?.compressed ?? images[0]?.url;
 export const metadata = {
   title: "Balázs Fotóz",
-  description: "Csak egy hobbifotós képei",
+  description: "Just a guy with a camera",
 
-  openGraph: {
-    images: image ? `/images${image}` : undefined,
-  },
+  // openGraph: {
+  //   images: image ? `/images${image}` : undefined,
+  // },
 };
 
 export default function RootLayout({
